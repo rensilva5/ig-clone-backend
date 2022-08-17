@@ -5,4 +5,6 @@ export const db = client.db("BocaCode")
 
 
 
+
+
 //const photosCollections = db.collection("photos")
