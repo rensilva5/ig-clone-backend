@@ -3,8 +3,4 @@ import {uri} from "../../credentials"
 export const client = new MongoClient(uri)
 export const db = client.db("BocaCode")
 
-
-
-
-
 //const photosCollections = db.collection("photos")

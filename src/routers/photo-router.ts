@@ -23,8 +23,9 @@ photoRouter.post('/', async (req: Request, res: Response) => {
 })
 
 // patch / photos/PHOTO_ID // with a body of {likes: 1}
+
 photoRouter.patch('/:id', async (req: Request, res: Response) => {
-    const { id } = req.params    // reciving tyhe parameters
+    const { id } = req.params    // receiving the parameters
     const { likes } = req.body
 
     if (!likes) {
