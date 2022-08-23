@@ -1,10 +1,10 @@
 import express from "express"
 import cors from "cors"
-import { photoRouter } from "./src/routers/photo-router"
+import { photoRouter } from "./src/routers/photo-router" // my  own file
 
 const app = express()
-app.use(cors())
-app.use(express.json())
+app.use(cors())   // alows everyone to access
+app.use(express.json()) // utilizinng json
 
 app.use('/photos', photoRouter)
 

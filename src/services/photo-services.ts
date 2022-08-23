@@ -27,7 +27,9 @@ const createPhoto = async (photo: Photo): Promise<string> => {
 }
 
 export const updateLikes = async(
-    id:string, inc:number = 1): Promise<Photo> => {
+    id:string,
+    inc:number = 1)
+    : Promise<Photo> => {
     const res = await photoCollection.findOneAndUpdate(
         {_id: new ObjectId(id)},
         { $inc: { likes: inc }}
@@ -35,7 +37,7 @@ export const updateLikes = async(
 
     const updatePhoto = res.value as Photo
     // updatedPhoto.likes = inc
-    return updatePhoto
+    return updatePhoto      // return the whole new thing for me
 }
 
 // export const createComment = async(id: string, comment: string): Promise<Photo> => {
